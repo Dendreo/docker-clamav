@@ -37,7 +37,8 @@ RUN mkdir /var/run/clamav && \
     chmod 750 /var/run/clamav && \
     chown -R clamav:clamav /usr/local/etc
 
-USER 1000
+# www-data
+USER 33 
 
 VOLUME /var/lib/clamav
 
