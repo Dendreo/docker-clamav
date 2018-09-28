@@ -15,7 +15,7 @@ RUN wget https://www.clamav.net/downloads/production/clamav-${CLAM_VERSION}.tar.
 
 # Add clamav user
 RUN groupadd -r clamav && \
-    useradd -r -g clamav -u 1000 clamav -d /var/lib/clamav && \
+    useradd -r -g clamav -u 33 clamav -d /var/lib/clamav && \
     mkdir -p /var/lib/clamav && \
     mkdir /usr/local/share/clamav && \
     chown -R clamav:clamav /var/lib/clamav /usr/local/share/clamav
